@@ -1,0 +1,18 @@
+type Mutation {
+    saveCustomerData(name: String!, email: String!): CustomerFormOutput @resolver(class: "Maverick\\CustomerForm\\Model\\Resolver\\SaveCustomerData")
+}
+
+type CustomerFormOutput {
+    success_message: String
+    error_message: String
+}
+
+type Query {
+    getCustomerData(name: String): [CustomerFormData] @resolver(class: "Maverick\\CustomerForm\\Model\\Resolver\\GetCustomerData")
+}
+
+type CustomerFormData {
+    id: Int
+    name: String
+    email: String
+}

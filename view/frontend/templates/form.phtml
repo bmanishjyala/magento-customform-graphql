@@ -1,0 +1,8 @@
+<form action="<?= $block->getFormAction(); ?>" method="POST">
+    <input type="hidden" name="form_key" value="<?= $block->getFormKey(); ?>"/>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required />
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required />
+    <button type="submit">Submit</button>
+</form>
